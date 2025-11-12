@@ -12,7 +12,7 @@ flowchart
         G72 --> IOA[Instances of assets]
         AS{Acceptable solution}
         AV --> AS
-        AV --> AS
+        IOA --> AS
         AS --> |No| G76[Evaluate custom solution with risk estimation, see 7.6]
             G76 --> VAS{Viable acceptable solution}
                 VAS --> |yes| PCS[Propose custom solution as an acceptable solution in 7.3]
@@ -20,7 +20,7 @@ flowchart
         AS --> |Yes| EAS[Evaluate acceptable solution with 7.3]
             EAS --> SSG[See the appropriate instrument specific guide for deviations or additional conditions concerning the acceptable solution]
             SSG --> RCD{Risc class D or higher, new tech}
-            RCD --> |yes| G76-1[Evaluate solution with instrument specific and complex attack vector]
+            RCD --> |yes| G76-1[Evaluate solution with instrument specific and complex attack vector, see 7.6]
                 G76-1 --> ARE
             RCD --> |No| ARE{all requirenments evaluated}
             ARE --> |No| G72
